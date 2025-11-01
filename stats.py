@@ -7,3 +7,12 @@ def get_num_words():
     book = get_book_text()
     return len(book.split())
 
+def get_num_characters():
+    characters = {}
+    book = get_book_text().lower()
+    for char in book:
+        if char in characters:
+            characters[char] += 1
+        else:
+            characters[char] = 1
+    return characters
