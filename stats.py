@@ -16,3 +16,14 @@ def get_num_characters():
         else:
             characters[char] = 1
     return characters
+
+def sort_on(items):
+    return items["num"]
+
+def sort_characters(characters):
+    sort_list = []
+    for char in characters:
+        sort_list.append({"char": char, "num": characters[char]})
+    sort_list.sort(reverse=True, key=sort_on)
+    return sort_list
+
